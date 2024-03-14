@@ -1,0 +1,4 @@
+mysqlclient
+fastapi==0.109.0
+uvicorn==0.26.0
+sqlalchemy

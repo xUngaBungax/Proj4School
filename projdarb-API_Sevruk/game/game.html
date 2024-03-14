@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Word game</h1>
+    </header>
+    <section>
+      <div id="modal-backdrop" class="modal-backdrop" style="display: none;"></div>
+      <div id="end-game-modal" class="modal" style="display: none;">
+          <div class="modal-content">
+              <p id="modal-title"></p>
+              <p id="modal-message"></p>
+              <button id="try-again-button">Try Again</button>
+          </div>
+      </div>
+    </section>
+    <div class="game-wrapper">
+      <section>
+        <div class="right-info-wrapper">
+          <div class="time-wrapper">
+            <button id="pause-button">Pause</button>
+            <div class="wrapper"><img src="styles/img/chronometer.png" alt=""><span id="timer">-</span></div>
+          </div>
+          <div class="wrapper" id="score"><img src="styles/img/star.png" alt="score icon"><span id="scoreCount">0</span></div>
+        </div>
+        <div id="word"></div>
+        <div id="current-word" style="display: none;"></div>
+        <div class="form-wrapper">
+          <input type="text" id="user-input" maxlength="10">
+          <button id="check-word-button">Submit</button>
+        </div>
+        <div id="result-message"></div>
+        
+        <div>
+          <p>
+            <button id="restart-game-button">Restart Game</button>
+            <button id="change-mode-button">Change Mode</button>
+          </p>
+          <p>
+            <a class="button" href="index.html">Back to Main Menu</a>
+            <a class="button" href="scoreboard.html">View All Scores</a>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div id="top-scores">
+          <table class="scoreboard" id="top-scores-table">
+            <thead>
+              <tr>
+                <th>Player Name</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="top-scores-body"></tbody>
+          </table>
+        </div>    
+      </section>
+    </div>
+    <script type="module" src="scripts/game.js"></script>
+  </body>
+</html>

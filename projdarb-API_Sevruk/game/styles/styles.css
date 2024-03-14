@@ -1,0 +1,321 @@
+:root {
+    --main-theme-color: rgb(104, 186, 194);
+}
+
+body {
+    position: relative;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(img/bg-2.jpg) center/cover no-repeat;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(2px);
+    z-index: -1;
+}
+
+#word {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.form-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=text] {
+    padding: 5px;
+    font-size: 16px;
+    padding: 16px 15px 14px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    border: 2px solid var(--main-theme-color);
+    box-sizing: border-box;
+}
+
+button,.button {
+    background-color: var(--main-theme-color);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 18px 15px 14px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.form-wrapper input[type=text] {
+    border-radius: 5px 0 0 5px;
+    min-height: 74px;
+    min-width: 500px;
+}
+
+.form-wrapper button {
+    border-radius: 0 5px 5px 0;
+    margin-top: 0;
+    margin-right: 0;
+    padding: 19px 15px 15px;
+    min-height: 74px;
+}
+
+button:hover,.button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #9a9a9a;
+    cursor: no-drop;
+}
+
+p {
+    font-size: 25px;
+    font-size: 50px;
+}
+
+header {
+    padding: 15px;
+    background-color: var(--main-theme-color);
+    color: #4CAF50;
+    font-size: 30px;
+    color: white;
+}
+
+#top-scores {
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+#top-scores-table {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 300px; /* ширина таблицы 300px */;
+}
+
+#top-scores-table th, #top-scores-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+#top-scores-table th {
+    color: white;
+    background-color: var(--main-theme-color);
+}
+
+table.scoreboard td {
+    background-color: #FFFFFF; /* Белый цвет для ячеек */;
+}
+
+table.scoreboard tr:nth-child(odd) td {
+    background-color: #f2f2f2; /* Светло-серый цвет для четных строк */;
+}
+
+table.scoreboard tr:hover td {
+    background-color: #e0e0e0; /* Цвет фона при наведении на строку */;
+}
+
+table.scoreboard tr:first-child td {
+    font-weight: bold;
+    background-color: #FFD700; /* Золотистый цвет для лучшего результата */;
+}
+
+table.scoreboard tr:nth-child(2) td {
+    background-color: #C0C0C0; /* Серебристый цвет для второго места */;
+}
+
+table.scoreboard tr:nth-child(3) td {
+    background-color: #CD7F32; /* Бронзовый цвет для третьего места */;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+#scoreboard {
+    margin-top: 20px;
+    justify-content: space-around;
+    display: flex;
+}
+
+#timed-mode, #challenge-mode {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+}
+
+h2 {
+    color: var(--main-theme-color);
+}
+
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    color: white;
+    background-color: var(--main-theme-color);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#language-selector {
+    margin-top: 20px;
+}
+
+#instructions {
+    margin-top: 30px;
+}
+
+.language-instructions {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    background-color: white;
+}
+
+#ru-instructions, #lv-instructions {
+    display: none;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    margin: 15px;
+}
+
+.modal p {
+    font-size: 40px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.modal, .modal-backdrop {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.game-wrapper {
+    display: flex;
+}
+
+.game-wrapper section:first-child {
+    flex: 1;
+    padding: 300px 20px 100px;
+    position: relative;
+}
+
+.game-wrapper section:last-child {
+    position: absolute;
+    padding: 0 30px;
+}
+
+.game-wrapper .right-info-wrapper {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-align: right;
+}
+
+.right-info-wrapper img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.right-info-wrapper .wrapper {
+    background: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100px;
+    border: 2px solid var(--main-theme-color);
+}
+
+.right-info-wrapper div span {
+    font-size: 30px;
+}
+
+.time-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.time-wrapper button {
+    margin-top: 0;
+}
+
+#word {
+    display: flex;
+    justify-content: center;   
+}
+
+#word span {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid var(--main-theme-color);
+}
